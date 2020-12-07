@@ -2,6 +2,8 @@ import React, { useState } from 'react';
 import './NavigationBar.css';
 import { Link, useLocation, useHistory } from 'react-router-dom';
 import MenuIcon from '@material-ui/icons/Menu';
+import dotenv from 'dotenv';
+dotenv.config();
 
 const NavBar = ({ user, updateUser }) => {
   const location = useLocation();

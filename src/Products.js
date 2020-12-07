@@ -7,6 +7,8 @@ import { Select, MenuItem, InputLabel } from '@material-ui/core';
 import DialogComponent from './components/Dialog';
 import Loading from './components/Loading';
 import Footer from './components/Footer';
+import dotenv from 'dotenv';
+dotenv.config();
 
 async function fetchProducts () {
     let response = await fetch(`${process.env.BACKEND_URL}/products`);

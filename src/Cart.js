@@ -6,6 +6,8 @@ import DialogComponent from './components/Dialog';
 import { useHistory } from 'react-router-dom';
 import Loading from './components/Loading';
 import Footer from './components/Footer';
+import dotenv from 'dotenv';
+dotenv.config();
 
 async function getCartItems() {
     let response = await fetch(`${process.env.BACKEND_URL}/cart`, {

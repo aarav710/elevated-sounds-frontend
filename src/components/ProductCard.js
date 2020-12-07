@@ -2,6 +2,8 @@ import React from 'react';
 import Button from './Button';
 import './ProductCard.css';
 import { useLocation } from 'react-router-dom';
+import dotenv from 'dotenv';
+dotenv.config();
 
 const ProductCard = ({ item, description, imageURL, price, product_id, cart_id }) => {
     const location = useLocation();

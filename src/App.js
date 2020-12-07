@@ -5,6 +5,8 @@ import './fonts.css';
 import DialogContext from './DialogContext'
 import userIDContext from './Context';
 import Loading from './components/Loading';
+import dotenv from 'dotenv';
+dotenv.config();
 import {
   BrowserRouter as Router,
   Switch,

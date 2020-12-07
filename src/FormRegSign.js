@@ -3,6 +3,8 @@ import { useForm } from "react-hook-form";
 import './FormRegSign.css';
 import { useHistory, Link } from 'react-router-dom';
 import Footer from './components/Footer';
+import dotenv from 'dotenv';
+dotenv.config();
 
 const FormRegSign = ({ updateUser, method }) => {
     useEffect(() => window.scrollTo(0, 0), []);

@@ -4,6 +4,8 @@ import './Button.css';
 import { useHistory } from 'react-router-dom';
 import { queryCache, useMutation } from 'react-query';
 import DialogContext from '../DialogContext';
+import dotenv from 'dotenv';
+dotenv.config();
 
 async function addToCart({ productId }) {
     let response = await fetch(`${process.env.BACKEND_URL}/addToCart`, {

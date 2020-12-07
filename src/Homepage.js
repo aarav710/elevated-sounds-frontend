@@ -8,6 +8,8 @@ import DialogComponent from './components/Dialog';
 import Loading from './components/Loading';
 import Footer from './components/Footer';
 import Button from './components/Button';
+import dotenv from 'dotenv';
+dotenv.config();
 
 async function fetchRecommendedProducts () {
     let response = await fetch(process.env.BACKEND_URL);
