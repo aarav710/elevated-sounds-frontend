@@ -10,13 +10,13 @@ import Footer from './components/Footer';
 import Button from './components/Button';
 
 async function fetchRecommendedProducts () {
-    let response = await fetch('https://vigorous-spence-6bc528.netlify.app/api/');
+    let response = await fetch('https://infinite-crag-03585.herokuapp.com/');
     let products = await response.json();
     return products;
 };
 
 async function getBanner () {
-    let response = await fetch('https://vigorous-spence-6bc528.netlify.app/api/banner');
+    let response = await fetch('https://infinite-crag-03585.herokuapp.com/banner');
     let banner = await response.json();
     return banner;
 };
@@ -38,7 +38,7 @@ const Homepage = ({settingCategory}) => {
             <Button todo="Add to cart" productId={banner.data.product_id}/>
           </div>
         </div>
-        <img src={'https://vigorous-spence-6bc528.netlify.app/api/banner.jpg'} alt="just like this" width="200px" height="400px" className="image"/>
+        <img src={'https://infinite-crag-03585.herokuapp.com/banner.jpg'} alt="just like this" width="200px" height="400px" className="image"/>
     </div>
             <div className="box">
                 <pa className="recommended-text">Recommended for you</pa>
@@ -49,18 +49,18 @@ const Homepage = ({settingCategory}) => {
                 <Suspense fallback={<div>Loading...</div>}>
                     <div className="row-1">
                         <Link to="/products" className="categories" onClick={()=> settingCategory('laptops')}>
-                            <Category photo={'https://vigorous-spence-6bc528.netlify.app/api/laptop-cat.jpg'} category={'Laptops'} />
+                            <Category photo={'https://infinite-crag-03585.herokuapp.com/laptop-cat.jpg'} category={'Laptops'} />
                         </Link>
                         <Link to="/products" className="categories" onClick={()=> settingCategory('headphones')}>
-                            <Category photo={'https://vigorous-spence-6bc528.netlify.app/api/headphone-cat.jpg'} category={'Headphones'} />
+                            <Category photo={'https://infinite-crag-03585.herokuapp.com/headphone-cat.jpg'} category={'Headphones'} />
                         </Link>
                     </div>
                     <div className="row-2">
                         <Link to="/products" className="categories" onClick={()=> settingCategory('tablets')}>
-                            <Category photo={'https://vigorous-spence-6bc528.netlify.app/api/tablet-cat.jpg'} category={'Tablets'} />
+                            <Category photo={'https://infinite-crag-03585.herokuapp.com/tablet-cat.jpg'} category={'Tablets'} />
                         </Link>
                         <Link to="/products" className="categories" onClick={()=> settingCategory('smartphones')}>
-                            <Category photo={'https://vigorous-spence-6bc528.netlify.app/api/phone-cat.jpg'} category={'Smartphones'} />
+                            <Category photo={'https://infinite-crag-03585.herokuapp.com/phone-cat.jpg'} category={'Smartphones'} />
                         </Link>
                     </div>
                 </Suspense>

@@ -9,7 +9,7 @@ import Loading from './components/Loading';
 import Footer from './components/Footer';
 
 async function fetchProducts () {
-    let response = await fetch('https://vigorous-spence-6bc528.netlify.app/api/products');
+    let response = await fetch('https://infinite-crag-03585.herokuapp.com/products');
     let products = await response.json();
     return products;
 };

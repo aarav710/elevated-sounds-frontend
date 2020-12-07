@@ -40,7 +40,7 @@ const App = () => {
     setOpen(false);
   };
   useEffect(()=> {
-    fetch('https://vigorous-spence-6bc528.netlify.app/api/checkUser',{
+    fetch('https://infinite-crag-03585.herokuapp.com/checkUser',{
       credentials: 'include',
       headers: {
       'Content-Type': 'application/json',
