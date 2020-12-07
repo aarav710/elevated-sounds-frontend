@@ -9,7 +9,7 @@ const FormRegSign = ({ updateUser, method }) => {
     const { register, handleSubmit, errors, reset } = useForm();
     const history = useHistory();
     const onSubmit = data => {
-        fetch('https://vigorous-spence-6bc528.netlify.app/api/${method}', {
+        fetch(`https://vigorous-spence-6bc528.netlify.app/api/${method}`, {
             method: 'POST',
             credentials: 'include',
             headers: {
@@ -44,11 +44,11 @@ const FormRegSign = ({ updateUser, method }) => {
                         <input type='submit' value={method === 'register' ? 'Register' : 'Sign In'} className='buttonstyling' />
                         {method === 'register' ?
                             <Link to='/signin'>
-                                <button className='alternative-option' href='#'>Sign In</button>
+                                <a className='alternative-option' href='#'>Sign In</a>
                             </Link>
                             :
                             <Link to='/register'>
-                                <button className='alternative-option'>Create an account</button>
+                                <a className='alternative-option'>Create an account</a>
                             </Link>
                         }
                     </div>
