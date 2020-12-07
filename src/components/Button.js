@@ -4,11 +4,9 @@ import './Button.css';
 import { useHistory } from 'react-router-dom';
 import { queryCache, useMutation } from 'react-query';
 import DialogContext from '../DialogContext';
-import dotenv from 'dotenv';
-dotenv.config();
 
 async function addToCart({ productId }) {
-    let response = await fetch(`${process.env.BACKEND_URL}/addToCart`, {
+    let response = await fetch(`${process.env.REACT_APP_BACKEND_URL}/addToCart`, {
         method: 'POST',
         credentials: 'include',
         headers: {
@@ -20,7 +18,7 @@ async function addToCart({ productId }) {
 };
 
 async function buyNow({ productId }) {
-    let response = await fetch(`${process.env.BACKEND_URL}/buyItem`, {
+    let response = await fetch(`${process.env.REACT_APP_BACKEND_URL}/buyItem`, {
         method: 'POST',
         credentials: 'include',
         headers: {
@@ -33,7 +31,7 @@ async function buyNow({ productId }) {
 };
 
 async function deleteFromCart({ cartId }) {
-    await fetch(`${process.env.BACKEND_URL}/deleteFromCart`, {
+    await fetch(`${process.env.REACT_APP_BACKEND_URL}/deleteFromCart`, {
         method: 'POST',
         credentials: 'include',
         headers: {

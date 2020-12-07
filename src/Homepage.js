@@ -8,17 +8,15 @@ import DialogComponent from './components/Dialog';
 import Loading from './components/Loading';
 import Footer from './components/Footer';
 import Button from './components/Button';
-import dotenv from 'dotenv';
-dotenv.config();
 
 async function fetchRecommendedProducts () {
-    let response = await fetch(process.env.BACKEND_URL);
+    let response = await fetch(process.env.REACT_APP_BACKEND_URL);
     let products = await response.json();
     return products;
 };
 
 async function getBanner () {
-    let response = await fetch(`${process.env.BACKEND_URL}/banner`);
+    let response = await fetch(`${process.env.REACT_APP_BACKEND_URL}/banner`);
     let banner = await response.json();
     return banner;
 };
@@ -40,7 +38,7 @@ const Homepage = ({settingCategory}) => {
             <Button todo="Add to cart" productId={banner.data.product_id}/>
           </div>
         </div>
-        <img src={`${process.env.BACKEND_URL}/banner.jpg`} alt="just like this" width="200px" height="400px" className="image"/>
+        <img src={`${process.env.REACT_APP_BACKEND_URL}/banner.jpg`} alt="just like this" width="200px" height="400px" className="image"/>
     </div>
             <div className="box">
                 <pa className="recommended-text">Recommended for you</pa>
@@ -51,18 +49,18 @@ const Homepage = ({settingCategory}) => {
                 <Suspense fallback={<div>Loading...</div>}>
                     <div className="row-1">
                         <Link to="/products" className="categories" onClick={()=> settingCategory('laptops')}>
-                            <Category photo={`${process.env.BACKEND_URL}/laptop-cat.jpg`} category={'Laptops'} />
+                            <Category photo={`${process.env.REACT_APP_BACKEND_URL}/laptop-cat.jpg`} category={'Laptops'} />
                         </Link>
                         <Link to="/products" className="categories" onClick={()=> settingCategory('headphones')}>
-                            <Category photo={`${process.env.BACKEND_URL}/headphone-cat.jpg`} category={'Headphones'} />
+                            <Category photo={`${process.env.REACT_APP_BACKEND_URL}/headphone-cat.jpg`} category={'Headphones'} />
                         </Link>
                     </div>
                     <div className="row-2">
                         <Link to="/products" className="categories" onClick={()=> settingCategory('tablets')}>
-                            <Category photo={`${process.env.BACKEND_URL}/tablet-cat.jpg`} category={'Tablets'} />
+                            <Category photo={`${process.env.REACT_APP_BACKEND_URL}/tablet-cat.jpg`} category={'Tablets'} />
                         </Link>
                         <Link to="/products" className="categories" onClick={()=> settingCategory('smartphones')}>
-                            <Category photo={`${process.env.BACKEND_URL}/phone-cat.jpg`} category={'Smartphones'} />
+                            <Category photo={`${process.env.REACT_APP_BACKEND_URL}/phone-cat.jpg`} category={'Smartphones'} />
                         </Link>
                     </div>
                 </Suspense>

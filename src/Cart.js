@@ -6,11 +6,9 @@ import DialogComponent from './components/Dialog';
 import { useHistory } from 'react-router-dom';
 import Loading from './components/Loading';
 import Footer from './components/Footer';
-import dotenv from 'dotenv';
-dotenv.config();
 
 async function getCartItems() {
-    let response = await fetch(`${process.env.BACKEND_URL}/cart`, {
+    let response = await fetch(`${process.env.REACT_APP_BACKEND_URL}/cart`, {
         credentials: 'include',
         headers: {
             'Content-Type': 'application/json',
@@ -24,7 +22,7 @@ const Cart = () => {
     const { isLoading, data } = useQuery('cart', getCartItems);
     const history = useHistory();
     useEffect(() => {
-        fetch(`${process.env.BACKEND_URL}/checkUser`, {
+        fetch(`${process.env.REACT_APP_BACKEND_URL}/checkUser`, {
             credentials: 'include',
             headers: {
                 'Content-Type': 'application/json',

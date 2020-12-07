@@ -3,15 +3,13 @@ import { useForm } from "react-hook-form";
 import './FormRegSign.css';
 import { useHistory, Link } from 'react-router-dom';
 import Footer from './components/Footer';
-import dotenv from 'dotenv';
-dotenv.config();
 
 const FormRegSign = ({ updateUser, method }) => {
     useEffect(() => window.scrollTo(0, 0), []);
     const { register, handleSubmit, errors, reset } = useForm();
     const history = useHistory();
     const onSubmit = data => {
-        fetch(`${process.env.BACKEND_URL}/${method}`, {
+        fetch(`${process.env.REACT_APP_BACKEND_URL}/${method}`, {
             method: 'POST',
             credentials: 'include',
             headers: {
@@ -31,7 +29,7 @@ const FormRegSign = ({ updateUser, method }) => {
     return (
         <div>
             <div className='signinbody'>
-                <div className='brandDisplay' style={{ backgroundImage:`url(${process.env.BACKEND_URL}/laptop-2.jpg)`}}>
+                <div className='brandDisplay' style={{ backgroundImage:`url(${process.env.REACT_APP_BACKEND_URL}/laptop-2.jpg)`}}>
                     <div className='brandname'>Elevated Sounds.</div>
                 </div>
                 <form onSubmit={handleSubmit(onSubmit)}>

@@ -5,13 +5,11 @@ import './fonts.css';
 import DialogContext from './DialogContext'
 import userIDContext from './Context';
 import Loading from './components/Loading';
-import dotenv from 'dotenv';
 import {
   BrowserRouter as Router,
   Switch,
   Route,
 } from "react-router-dom";
-dotenv.config();
 const Products = React.lazy(() => import('./Products'));
 const Homepage = React.lazy(() => import('./Homepage'));
 const FormRegSign = React.lazy(() => import('./FormRegSign'));
@@ -42,7 +40,7 @@ const App = () => {
     setOpen(false);
   };
   useEffect(()=> {
-    fetch(`${process.env.BACKEND_URL}/checkUser`,{
+    fetch(`${process.env.REACT_APP_BACKEND_URL}/checkUser`,{
       credentials: 'include',
       headers: {
       'Content-Type': 'application/json',
