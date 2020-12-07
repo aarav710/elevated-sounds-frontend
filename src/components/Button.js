@@ -6,7 +6,7 @@ import { queryCache, useMutation } from 'react-query';
 import DialogContext from '../DialogContext';
 
 async function addToCart({ productId }) {
-    let response = await fetch('https://infinite-crag-03585.herokuapp.com/addToCart', {
+    let response = await fetch(`${process.env.BACKEND_URL}/addToCart`, {
         method: 'POST',
         credentials: 'include',
         headers: {
@@ -18,7 +18,7 @@ async function addToCart({ productId }) {
 };
 
 async function buyNow({ productId }) {
-    let response = await fetch('https://infinite-crag-03585.herokuapp.com/buyItem', {
+    let response = await fetch(`${process.env.BACKEND_URL}/buyItem`, {
         method: 'POST',
         credentials: 'include',
         headers: {
@@ -31,7 +31,7 @@ async function buyNow({ productId }) {
 };
 
 async function deleteFromCart({ cartId }) {
-    await fetch('https://infinite-crag-03585.herokuapp.com/deleteFromCart', {
+    await fetch(`${process.env.BACKEND_URL}/deleteFromCart`, {
         method: 'POST',
         credentials: 'include',
         headers: {

@@ -40,7 +40,7 @@ const App = () => {
     setOpen(false);
   };
   useEffect(()=> {
-    fetch('https://infinite-crag-03585.herokuapp.com/checkUser',{
+    fetch(`${process.env.BACKEND_URL}/checkUser`,{
       credentials: 'include',
       headers: {
       'Content-Type': 'application/json',
