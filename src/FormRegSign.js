@@ -44,7 +44,7 @@ const FormRegSign = ({ updateUser, method }) => {
                         <input type='submit' value={method === 'register' ? 'Register' : 'Sign In'} className='buttonstyling' />
                         {method === 'register' ?
                             <Link to='/signin'>
-                                <a className='alternative-option' href='#'>Sign In</a>
+                                <a className='alternative-option'>Sign In</a>
                             </Link>
                             :
                             <Link to='/register'>
