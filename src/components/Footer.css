@@ -1,0 +1,45 @@
+footer {
+    background-color: black;
+    height: 50vh;
+    display: flex;
+    justify-content: space-around;
+    margin-top: 60px;
+}
+
+.headings {
+    color: white;
+    font-weight: bolder;
+    font-size: 3.5vw;
+    margin-bottom: 40px;
+    margin-top: 20px;
+}
+
+.list-items {
+    color: white;
+    font-size: 1.75vw;
+    text-decoration: underline;
+    margin-bottom: 20px;
+}
+
+.box-1 {
+    display: flex;
+    align-items: center;
+}
+
+@media screen and (max-width: 1000px) {
+    .list-items {
+       font-size: 3vw;
+    }
+    .headings {
+        font-size: 5vw;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .list-items {
+       font-size: 3.5vw;
+    }
+    .headings {
+        font-size: 6vw;
+    }
+}

@@ -1,0 +1,19 @@
+.recommended-text {
+    font-weight: bold;
+    font-size: 3.5vw;
+    display: flex;
+    justify-content: center;
+}
+
+.capsule {
+    margin: auto;
+    margin-top: 100px;
+    margin-bottom: 50px;
+    width: 90%;
+}
+
+@media screen and (max-width: 920px) {
+    .recommended-text {
+        font-size: 7vw;
+    }
+}

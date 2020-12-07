@@ -1,0 +1,111 @@
+.signinbody {
+    display: flex;
+    height: 70vh;
+    width: 70%;
+    margin: auto;
+    justify-content: center;
+    align-items: center;
+    margin-top: 150px;
+    box-shadow: 5px 5px 5px 5px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+}
+
+.signin {
+    font-size: 5vw;
+    display: block;
+    margin-bottom: 1vh;
+}
+
+.brandname {
+    margin-left: 0.75vw;
+}
+
+.brandDisplay {
+    display: flex;
+    width: 70%;
+    height: 100%;
+    font-size: 5vw;
+    color: white;
+    justify-content: center;
+    align-items: flex-end;
+    font-weight: 800;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.buttonholder {
+    display: flex;
+    height: 40%;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+}
+
+.inputforms {
+    display: block;
+    background-color: transparent;
+    border: 2px solid rgb(237, 169, 180);
+    border-radius: 5px;
+    font-size: 14px;
+    padding: 10px;
+    width: 70%;
+}
+
+.buttonstyling {
+    background: #ef6079ff;
+    font-size: 1vw;
+    width: 10vw;
+    color: white;
+    border-radius: 25px;
+    padding: 20px;
+    border: 2px solid #ef6079ff;
+    margin-right: 20px;
+    cursor: pointer;
+    transition: transform .2s ease-in-out;
+    box-shadow: 0px 15px 20px rgba(255,97,111, 0.6);
+}
+
+.buttonstyling:hover {
+    transform: scale(1.1);
+}
+.alternative-option {
+    color: #ff1744;
+}
+
+.emailid {
+    display: block;
+    font-size: 2vw;
+    color: grey;
+}
+
+form {
+    padding: 10px;
+    height: 100%;
+    width: 30%;
+}
+
+span {
+    color: red;
+}
+
+@media screen and (max-width: 1150px) {
+    .buttonstyling {
+        width: 150px;
+        font-size: 15px;
+    }
+    .signinbody {
+        flex-direction: column;
+    }
+    .brandDisplay {
+        display: none;
+    }
+    .emailid {
+        font-size: 3.5vw;
+    }
+    .signin {
+        font-size: 7.5vw;
+    }
+    .inputforms {
+        width: 100%;
+    }
+}

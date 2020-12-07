@@ -1,0 +1,8 @@
+.scrollsidewaysBox {
+    align-items: center;
+    margin: auto;
+    margin-top: 20px;
+    padding: 20px;
+    display: flex;
+    overflow-x: auto;
+}
