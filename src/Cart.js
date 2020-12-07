@@ -19,8 +19,8 @@ async function getCartItems() {
 };
 
 const Cart = () => {
-    const history = useHistory();
     const { isLoading, data } = useQuery('cart', getCartItems);
+    const history = useHistory();
     useEffect(() => {
         fetch(`${process.env.BACKEND_URL}/checkUser`, {
             credentials: 'include',
@@ -32,7 +32,7 @@ const Cart = () => {
                 history.push("/signin");
             }
         })
-    }, []);
+    }, [history]);
     return (
         <div>
             <div className='capsule'>

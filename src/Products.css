@@ -32,7 +32,7 @@
     font-weight: bold;
     font-size: 3vw;
     display: flex;
-    justify-content: start;
+    justify-content: flex-start;
 }
 
 @media screen and (max-width: 1150px) {

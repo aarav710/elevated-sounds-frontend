@@ -44,11 +44,11 @@ const FormRegSign = ({ updateUser, method }) => {
                         <input type='submit' value={method === 'register' ? 'Register' : 'Sign In'} className='buttonstyling' />
                         {method === 'register' ?
                             <Link to='/signin'>
-                                <a className='alternative-option'>Sign In</a>
+                                <button className='alternative-option' href='#'>Sign In</button>
                             </Link>
                             :
                             <Link to='/register'>
-                                <a className='alternative-option'>Create an account</a>
+                                <button className='alternative-option'>Create an account</button>
                             </Link>
                         }
                     </div>

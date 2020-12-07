@@ -31,7 +31,7 @@ async function buyNow({ productId }) {
 };
 
 async function deleteFromCart({ cartId }) {
-    let response = await fetch(`${process.env.BACKEND_URL}/deleteFromCart`, {
+    await fetch(`${process.env.BACKEND_URL}/deleteFromCart`, {
         method: 'POST',
         credentials: 'include',
         headers: {
