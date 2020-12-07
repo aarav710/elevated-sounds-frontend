@@ -8,7 +8,7 @@ import Loading from './components/Loading';
 import Footer from './components/Footer';
 
 async function getCartItems() {
-    let response = await fetch(`${process.env.BACKEND_URL}/cart`, {
+    let response = await fetch('https://vigorous-spence-6bc528.netlify.app/api/cart', {
         credentials: 'include',
         headers: {
             'Content-Type': 'application/json',
@@ -22,7 +22,7 @@ const Cart = () => {
     const { isLoading, data } = useQuery('cart', getCartItems);
     const history = useHistory();
     useEffect(() => {
-        fetch(`${process.env.BACKEND_URL}/checkUser`, {
+        fetch('https://vigorous-spence-6bc528.netlify.app/api/checkUser', {
             credentials: 'include',
             headers: {
                 'Content-Type': 'application/json',

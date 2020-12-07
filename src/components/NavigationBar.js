@@ -12,7 +12,7 @@ const NavBar = ({ user, updateUser }) => {
       <ul className="components">
         <div className='menuIcon'><MenuIcon fontSize="large" onClick={() => setOpen(isOpen ? false : true)} /></div>
         <div className="brand">
-          <img src={`${process.env.BACKEND_URL}/elevated-sounds-logo.png`} alt="logo" width="50px" height="50px" className="logo" />
+          <img src={'https://vigorous-spence-6bc528.netlify.app/api/elevated-sounds-logo.png'} alt="logo" width="50px" height="50px" className="logo" />
           <Link to="/" className="navStyle" key={0}>
             <li className="link">Elevated Sounds</li>
           </Link>
@@ -28,7 +28,7 @@ const NavBar = ({ user, updateUser }) => {
             <li className="link">{user.ID !== null ? 'Cart' : 'Sign In'}</li>
           </Link>
           {user.ID !== null ?
-            <Link to="/" className="navStyle" onClick={() => { updateUser({ type: 'LOG OUT' }); fetch(`${process.env.BACKEND_URL}/logout`, { credentials: 'include', headers: { 'Content-Type': 'application/json', }, }); setOpen(false); history.push("/");}} key={6}>
+            <Link to="/" className="navStyle" onClick={() => { updateUser({ type: 'LOG OUT' }); fetch('https://vigorous-spence-6bc528.netlify.app/api/logout', { credentials: 'include', headers: { 'Content-Type': 'application/json', }, }); setOpen(false); history.push("/");}} key={6}>
               <li className="link">Logout</li>
             </Link>
             : null

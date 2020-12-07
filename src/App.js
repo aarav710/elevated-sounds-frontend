@@ -40,7 +40,7 @@ const App = () => {
     setOpen(false);
   };
   useEffect(()=> {
-    fetch(`${process.env.BACKEND_URL}/checkUser`,{
+    fetch('https://vigorous-spence-6bc528.netlify.app/api/checkUser',{
       credentials: 'include',
       headers: {
       'Content-Type': 'application/json',

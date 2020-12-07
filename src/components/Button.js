@@ -6,7 +6,7 @@ import { queryCache, useMutation } from 'react-query';
 import DialogContext from '../DialogContext';
 
 async function addToCart({ productId }) {
-    let response = await fetch(`${process.env.BACKEND_URL}/addToCart`, {
+    let response = await fetch('https://vigorous-spence-6bc528.netlify.app/api/addToCart', {
         method: 'POST',
         credentials: 'include',
         headers: {
@@ -18,7 +18,7 @@ async function addToCart({ productId }) {
 };
 
 async function buyNow({ productId }) {
-    let response = await fetch(`${process.env.BACKEND_URL}/buyItem`, {
+    let response = await fetch('https://vigorous-spence-6bc528.netlify.app/api/buyItem', {
         method: 'POST',
         credentials: 'include',
         headers: {
@@ -31,7 +31,7 @@ async function buyNow({ productId }) {
 };
 
 async function deleteFromCart({ cartId }) {
-    await fetch(`${process.env.BACKEND_URL}/deleteFromCart`, {
+    await fetch('https://vigorous-spence-6bc528.netlify.app/api/deleteFromCart', {
         method: 'POST',
         credentials: 'include',
         headers: {

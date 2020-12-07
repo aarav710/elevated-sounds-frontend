@@ -9,7 +9,7 @@ const FormRegSign = ({ updateUser, method }) => {
     const { register, handleSubmit, errors, reset } = useForm();
     const history = useHistory();
     const onSubmit = data => {
-        fetch(`${process.env.BACKEND_URL}/${method}`, {
+        fetch('https://vigorous-spence-6bc528.netlify.app/api/${method}', {
             method: 'POST',
             credentials: 'include',
             headers: {
@@ -29,7 +29,7 @@ const FormRegSign = ({ updateUser, method }) => {
     return (
         <div>
             <div className='signinbody'>
-                <div className='brandDisplay' style={{ backgroundImage: `${process.env.BACKEND_URL}/laptop-2.jpg)` }}>
+                <div className='brandDisplay' style={{ backgroundImage:'https://vigorous-spence-6bc528.netlify.app/api/laptop-2.jpg)'}}>
                     <div className='brandname'>Elevated Sounds.</div>
                 </div>
                 <form onSubmit={handleSubmit(onSubmit)}>

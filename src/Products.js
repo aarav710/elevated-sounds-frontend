@@ -9,7 +9,7 @@ import Loading from './components/Loading';
 import Footer from './components/Footer';
 
 async function fetchProducts () {
-    let response = await fetch(`${process.env.BACKEND_URL}/products`);
+    let response = await fetch('https://vigorous-spence-6bc528.netlify.app/api/products');
     let products = await response.json();
     return products;
 };
