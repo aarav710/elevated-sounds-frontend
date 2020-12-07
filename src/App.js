@@ -6,12 +6,12 @@ import DialogContext from './DialogContext'
 import userIDContext from './Context';
 import Loading from './components/Loading';
 import dotenv from 'dotenv';
-dotenv.config();
 import {
   BrowserRouter as Router,
   Switch,
   Route,
 } from "react-router-dom";
+dotenv.config();
 const Products = React.lazy(() => import('./Products'));
 const Homepage = React.lazy(() => import('./Homepage'));
 const FormRegSign = React.lazy(() => import('./FormRegSign'));
