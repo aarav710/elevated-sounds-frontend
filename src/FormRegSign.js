@@ -9,7 +9,7 @@ const FormRegSign = ({ updateUser, method }) => {
     const { register, handleSubmit, errors, reset } = useForm();
     const history = useHistory();
     const onSubmit = data => {
-        fetch('https://infinite-crag-03585.herokuapp.com/${method}', {
+        fetch(`https://infinite-crag-03585.herokuapp.com/${method}`, {
             method: 'POST',
             credentials: 'include',
             headers: {
