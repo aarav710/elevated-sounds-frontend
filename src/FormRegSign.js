@@ -29,7 +29,7 @@ const FormRegSign = ({ updateUser, method }) => {
     return (
         <div>
             <div className='signinbody'>
-                <div className='brandDisplay' style={{ backgroundImage:'https://infinite-crag-03585.herokuapp.com/laptop-2.jpg)'}}>
+                <div className='brandDisplay' style={{ backgroundImage:'https://infinite-crag-03585.herokuapp.com/laptop-2.jpg'}}>
                     <div className='brandname'>Elevated Sounds.</div>
                 </div>
                 <form onSubmit={handleSubmit(onSubmit)}>
