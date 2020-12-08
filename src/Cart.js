@@ -32,7 +32,7 @@ const Cart = () => {
                 history.push("/signin");
             }
         })
-    }, [history]);
+    }, []);
     return (
         <div>
             <div className='capsule'>
