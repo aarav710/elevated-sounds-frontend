@@ -8,7 +8,7 @@ import Loading from './components/Loading';
 import Footer from './components/Footer';
 
 async function getCartItems() {
-    let response = await fetch(`${REACT_APP_BACKEND_URL}/cart`, {
+    let response = await fetch(`${process.env.REACT_APP_BACKEND_URL}/cart`, {
         credentials: 'include',
         headers: {
             'Content-Type': 'application/json',
@@ -22,7 +22,7 @@ const Cart = () => {
     const { isLoading, data } = useQuery('cart', getCartItems);
     const history = useHistory();
     useEffect(() => {
-        fetch(`${REACT_APP_BACKEND_URL}/checkUser`, {
+        fetch(`${process.env.REACT_APP_BACKEND_URL}/checkUser`, {
             credentials: 'include',
             headers: {
                 'Content-Type': 'application/json',

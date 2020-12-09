@@ -9,7 +9,7 @@ import Loading from './components/Loading';
 import Footer from './components/Footer';
 
 async function fetchProducts () {
-    let response = await fetch(`${REACT_APP_BACKEND_URL}/products`);
+    let response = await fetch(`${process.env.REACT_APP_BACKEND_URL}/products`);
     let products = await response.json();
     return products;
 };

@@ -7,7 +7,7 @@ const ProductCard = ({ item, description, imageURL, price, product_id, cart_id }
     const location = useLocation();
     return (
         <div className="item-card">
-            <img loading='lazy' alt='pic of the product' className="image-recommended" src={`${REACT_APP_BACKEND_URL}/${imageURL}`} />
+            <img loading='lazy' alt='pic of the product' className="image-recommended" src={`${process.env.REACT_APP_BACKEND_URL}/${imageURL}`} />
             <div className='holder-of-priceanditem'>
                 <div className="item">{item}</div>
                 <div className='price'>${price}</div>

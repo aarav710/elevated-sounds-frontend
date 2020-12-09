@@ -40,7 +40,7 @@ const App = () => {
     setOpen(false);
   };
   useEffect(()=> {
-    fetch(`${REACT_APP_BACKEND_URL}/checkUser`,{
+    fetch(`${process.env.REACT_APP_BACKEND_URL}/checkUser`,{
       credentials: 'include',
       headers: {
       'Content-Type': 'application/json',
