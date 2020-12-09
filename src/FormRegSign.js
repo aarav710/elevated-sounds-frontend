@@ -9,7 +9,7 @@ const FormRegSign = ({ updateUser, method }) => {
     const { register, handleSubmit, errors, reset } = useForm();
     const history = useHistory();
     const onSubmit = data => {
-        fetch(`https://infinite-crag-03585.herokuapp.com/${method}`, {
+        fetch(`${REACT_APP_BACKEND_URL}/${method}`, {
             method: 'POST',
             credentials: 'include',
             headers: {
@@ -29,7 +29,7 @@ const FormRegSign = ({ updateUser, method }) => {
     return (
         <div>
             <div className='signinbody'>
-                <div className='brandDisplay' style={{ backgroundImage:'url(https://infinite-crag-03585.herokuapp.com/laptop-2.jpg)'}}>
+                <div className='brandDisplay' style={{ backgroundImage:`url(${REACT_APP_BACKEND_URL}/laptop-2.jpg)`}}>
                     <div className='brandname'>Elevated Sounds.</div>
                 </div>
                 <form onSubmit={handleSubmit(onSubmit)}>
