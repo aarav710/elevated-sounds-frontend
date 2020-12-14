@@ -38,7 +38,7 @@ const Homepage = ({settingCategory}) => {
             <Button todo="Add to cart" productId={banner.data.product_id}/>
           </div>
         </div>
-        <img src={"https://res.cloudinary.com/demo/image/upload/w_auto,c_scale/smiling_man.jpg"} alt="just like this" width="200px" height="400px" className="image"/>
+        <img src={`${process.env.REACT_APP_BACKEND_URL}/banner.jpg`} alt="just like this" width="200px" height="400px" className="image"/>
     </div>
             <div className="box">
                 <pa className="recommended-text">Recommended for you</pa>
