@@ -16,7 +16,7 @@ const ProductList = ({ products }) => {
                         imageURL={product.imageurl}
                         cart_id = {product.cart_id === null || product.cart_id === undefined ? null : product.cart_id}
                         price={product.price} />);
-                })};
+                })}
             </div>
     );
 };

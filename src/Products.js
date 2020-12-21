@@ -62,7 +62,7 @@ const Products = ({ settingCategory, category }) => {
                             imageURL={product.imageurl}
                             price={product.price} />);
                     })
-                };
+                }
             </div>
             <DialogComponent />
         </div>

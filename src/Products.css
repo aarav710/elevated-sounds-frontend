@@ -30,7 +30,7 @@
 
 .recommended-text {
     font-weight: bold;
-    font-size: 3vw;
+    font-size: large;
     display: flex;
     justify-content: flex-start;
 }
