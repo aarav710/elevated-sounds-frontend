@@ -53,11 +53,11 @@ nav {
 @media screen and (max-width: 750px){
     .menuIcon {
         display: flex;
-        justify-content: center;
+        justify-content: left;
         align-items: center;
         z-index: 5;
         cursor: pointer;
-        flex: 1
+        flex: 1;
     }
     .pages {
         position: fixed;
@@ -81,7 +81,7 @@ nav {
     .brand {
         display: flex;
         z-index: 3;
-        flex: 2;
+        flex: 3;
         justify-content: left;
     }
 }
