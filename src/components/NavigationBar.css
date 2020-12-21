@@ -56,6 +56,7 @@ nav {
         justify-content: left;
         align-items: center;
         z-index: 5;
+        margin-left: -40px;
         cursor: pointer;
         flex: 1;
     }
@@ -71,12 +72,12 @@ nav {
         transition: all 1s ease-in-out;
     }
     .pages-open {
-        clip-path: circle(1000px at 90% -10%);
-        -webkit-clip-path: circle(1000px at 90% -10%);
+        clip-path: circle(1500px at 100% -10%);
+        -webkit-clip-path: circle(1500px at 100% -10%);
     }
     .pages-closed {
-        clip-path: circle(100px at 90% -10%);
-        -webkit-clip-path: circle(100px at 90% -10%);
+        clip-path: circle(100px at 100% -10%);
+        -webkit-clip-path: circle(100px at 100% -10%);
     }
     .brand {
         display: flex;
