@@ -58,6 +58,7 @@ nav {
         align-items: center;
         z-index: 5;
         cursor: pointer;
+        flex: 1
     }
     .pages {
         position: fixed;
@@ -79,7 +80,10 @@ nav {
         -webkit-clip-path: circle(100px at 90% -10%);
     }
     .brand {
+        display: flex;
         z-index: 3;
         margin-left: 12vw;
+        flex: 2;
+        justify-content: left;
     }
 }
