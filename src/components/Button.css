@@ -1,7 +1,7 @@
 .styleButton {
     background: #ef6079ff;
-    font-size: 1vw;
-    width: 10vw;
+    font-size: 15px;
+    width: 125px;
     color: white;
     border-radius: 25px;
     padding: 20px;
@@ -13,11 +13,4 @@
 
 .styleButton:hover {
     transform: scale(1.1);
-}
-
-@media screen and (max-width: 1150px) {
-    .styleButton {
-        width: 125px;
-        font-size: 15px;
-    }
 }
