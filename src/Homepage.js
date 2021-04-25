@@ -31,7 +31,7 @@ const Homepage = ({settingCategory}) => {
         <div>
              <div className="container">
         <div className="text">
-          <div className="tagline">Plug it, listen to it, feel it.</div>
+          <div className="tagline"> it, listen to it, feel it.</div>
           <pa className="introline">Introducing our new headphones which you need, the CFMAX-11, you are gonna love it.</pa>
           <div className="buttons">
             <Button todo="Buy now" productId={banner.data.product_id}/>
